@@ -1,0 +1,9 @@
+# dry run - DO THIS FIRST!
+rsync -anv --include="*/" --include="*.[Aa][Vv][Ii]" --include="*.[Mm][Pp]4" --include="*.[Mm][Kk][Vv]" --exclude="*" --prune-empty-dirs "192.168.0.100:/mnt/disk1/torrentfiles/" "/Users/phil/Movies"
+
+# then run wihout the -n flag and so that the process won't stop when you close the shell
+nohup rsync -av --include="*/" --include="*.[Aa][Vv][Ii]" --include="*.[Mm][Pp]4" --include="*.[Mm][Kk][Vv]" --exclude="*" --prune-empty-dirs "192.168.0.100:/mnt/disk1/torrentfiles/" "/Users/phil/Movies/Films/Action" &
+
+nohup rsync -av --include="*/" --include="*.[Aa][Vv][Ii]" --include="*.[Mm][Pp]4" --include="*.[Mm][Kk][Vv]" --exclude="*" --prune-empty-dirs "192.168.0.100:/mnt/disk1/torrentfiles/" "/Users/phil/Movies" &
+
+nohup rsync -av --include="*/" --include="*.[Aa][Vv][Ii]" --include="*.[Mm][Pp]4" --include="*.[Mm][Kk][Vv]" --exclude="*" --prune-empty-dirs "192.168.0.100:/mnt/disk1/torrentfiles/" "/Users/phil/Movies" &
